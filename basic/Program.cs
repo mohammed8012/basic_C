@@ -6,6 +6,37 @@ using System.Threading.Tasks;
 
 public class Exercise50
 {
+    //find the pair of adjacent elements
+    static int MaxProduct(int[] arr)
+    {
+        int max = arr[0] * arr[1];
+
+        for (int i = 1; i < arr.Length - 1; i++)
+        {
+            int product = arr[i] * arr[i + 1];
+
+            if (product > max)
+            {
+                max = product;
+            }
+        }
+
+        return max;
+    }
+    //palindrome
+    static bool IsPalindrome(string str)
+    {
+        for (int i = 0; i < str.Length / 2; i++)
+        {
+            if (str[i] != str[str.Length - 1 - i])
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     public static void Main()
     {
         /*
@@ -77,7 +108,30 @@ Check if an array contains an odd number? True*/
         }
         Console.WriteLine($"Check if an array con tains an odd number?{vodd}");
         Console.WriteLine("------------------------------------");
+        /*Find Century of Year
 
+Write a C# program to get the century of a year*/
+
+        int year = 1900;
+        int century = (year + 99) / 100;
+        Console.WriteLine($"The century of the year {year} is: {century}");
+        Console.WriteLine("------------------------------------");
+        /*Max Product of Adjacent Elements
+
+Write a C# program to find the pair of adjacent elements that has the largest product of the given array.*/
+        //The main function is above.
+
+        int[] arr4 = { 3, 6, -2, -5, 7, 3 };
+
+        Console.WriteLine(MaxProduct(arr));
+        Console.WriteLine("------------------------------------");
+        /*Check Palindrome String
+
+Write a C# program to check if a given string is a palindrome or not.*/
+        //The main function is above.
+        Console.WriteLine(IsPalindrome("aba"));
+        Console.WriteLine(IsPalindrome("abcd"));
+        Console.WriteLine("------------------------------------");
 
 
 
