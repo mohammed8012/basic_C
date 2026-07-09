@@ -39,6 +39,213 @@ public class Exercise50
 
     public static void Main()
     {
+        /*1. Print Hello and Name
+
+Write a C# Sharp program to print Hello and your name in a separate line.
+Expected Output :
+Hello: Alexandra Abramov*/
+        Console.WriteLine("Hello: Alexandra Abramov");
+        Console.WriteLine("-------------------------------------");
+        /*2. Sum of Two Numbers
+
+Write a C# Sharp program to print the sum of two numbers.*/
+        int x=2; int y=3;
+        int z = x + y;
+        Console.WriteLine(z);
+        Console.WriteLine("--------------------------------------------");
+        /*3. Divide Two Numbers
+
+Write a C# Sharp program to print the result of dividing two numbers.*/
+        float s = 4 / 2;
+        Console.WriteLine(s);
+        Console.WriteLine("--------------------------------------------");
+        /*4. Specified Operations Results
+
+Write a C# Sharp program to print the results of the specified operations.-1 + 4 * 6
+( 35+ 5 ) % 7
+14 + -4 * 6 / 11
+2 + 15 / 6 * 1 - 7 % 2
+Expected Output:
+23
+5
+12
+3*/
+        double result = -1 + 4 * 6;
+        Console.WriteLine(result);
+        double result1 = (35 + 5) % 7;
+        Console.WriteLine(result1);
+        double result2 = 14 + -4 * 6 / 11;
+        Console.WriteLine(result2);
+        double result3 = 2 + 15 / 6 * 1 - 7 % 2;
+        Console.WriteLine(result3);
+        
+        Console.WriteLine("-------------------------------");
+        /*5. Swap Two Numbers
+
+Write a C# Sharp program to swap two numbers.
+Test Data:
+Input the First Number : 5
+Input the Second Number : 6
+Expected Output:
+After Swapping :
+First Number : 6
+Second Number : 5*/
+        int first = 5; int second=6;
+        (first,second)=(second,first);
+        //Another way
+        int tm = first;
+        first= second;
+        second = tm;
+        Console.WriteLine($"After Swapping :\nFirst Number : {first}\nSecond Number : {second}");
+        Console.WriteLine("-----------------------------------");
+        /*6. Multiply Three Numbers
+
+Write a C# Sharp program to print the output of the multiplication of three numbers entered by the user.
+Test Data:
+Input the first number to multiply: 2
+Input the second number to multiply: 3
+Input the third number to multiply: 6
+Expected Output:
+2 x 3 x 6 = 36*/
+        int a = 2; int b = 3; int c = 6;
+        int result4 = a * b * c;
+        Console.WriteLine(result4);
+        Console.WriteLine("-----------------------------------");
+        /*7. Arithmetic Operations
+
+Write a C# Sharp program to print on screen the output of adding, subtracting, multiplying and dividing two numbers entered by the user.
+Test Data:
+Input the first number: 25
+Input the second number: 4
+Expected Output:
+25 + 4 = 29
+25 - 4 = 21
+25 x 4 = 100
+25 / 4 = 6
+25 mod 4 = 1*/
+        var num1= 25;  var num2 = 4;
+        var r1=num1 + num2;
+        Console.WriteLine($"{num1} + {num2} = {r1}");
+        var r2 = num1 - num2;
+        Console.WriteLine($"{num1} - {num2} = {r2}");
+        var r3 = num1 * num2;
+        Console.WriteLine($"{num1} x {num2} = {r3}");
+        var r4 = num1 / num2;
+        Console.WriteLine($"{num1} / {num2} = {r4}");
+        var r5 = num1 % num2;
+        Console.WriteLine($"{num1} mod {num2} = {r5}");
+        Console.WriteLine("-----------------------------------");
+        /*8. Multiplication Table
+
+Write a C# Sharp program that prints the multiplication table of a number as input.
+Test Data:
+Enter the number: 5
+Expected Output:
+5 * 0 = 0
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+....
+5 * 10 = 50*/
+        int number = 5;
+        for (int i = 0; i <= 10; i++)
+        {
+            int result5 = number * i;
+            Console.WriteLine($"{number} * {i} = {result5}");
+        }
+        Console.WriteLine("-----------------------------------");
+        /*9. Average of Four Numbers
+
+Write a C# Sharp program that takes four numbers as input to calculate and print the average.
+Test Data:
+Enter the First number: 10
+Enter the Second number: 15
+Enter the third number: 20
+Enter the four number: 30
+
+Expected Output:
+The average of 10 , 15 , 20 , 30 is: 18*/
+        int numA = 10; int numB = 15; int numC = 20; int numD = 30;
+        int average = (numA + numB + numC + numD) / 4;
+        Console.WriteLine($"The average of {numA} , {numB} , {numC} , {numD} is: {average}");
+        Console.WriteLine("-------------------------------------");
+        /*10. Specified Formula with Three Numbers
+
+Write a C# Sharp program that takes three numbers (x,y,z) as input and outputs (x+y).z and x.y + y.z.
+Test Data:
+Enter first number - 5
+Enter second number - 6
+Enter third number - 7
+
+Expected Output:
+Result of specified numbers 5, 6 and 7, (x+y).z is 77 and x.y + y.z is 72*/
+        var numa = 5; var numb= 6;
+        var numc = 7;
+        Console.WriteLine($"(x+y).z is {(numa + numb) * numc} and x.y + y.z is {numa * numb + numb * numc}");
+        Console.WriteLine("-----------------------------------");
+        /*Write a C# Sharp program that takes an age (for example 20) as input and prints something like "You look older than 20".
+Test Data:
+Enter your age - 25
+Expected Output:
+You look older than 25*/
+        Console.WriteLine("Enter your age");
+        var age=Console.ReadLine();
+        Console.WriteLine($"You look older than{age}");
+        Console.WriteLine("----------------------------------------------");
+        /*12. Repeat Number in Rows
+
+Write a C# program that takes a number as input and displays it four times in a row (separated by blank spaces), and then four times in the next row, with no separation. You should do it twice: Use the console. Write and use {0}.
+Test Data:
+Enter a digit: 25
+Expected Output:
+25 25 25 25
+25252525
+25 25 25 25
+25252525*/
+        int digit = 25;
+        Console.WriteLine("{0} {0} {0} {0}", digit);
+        Console.WriteLine("{0}{0}{0}{0}", digit);
+        Console.WriteLine($"{digit}{digit}{digit}{digit}");
+        Console.WriteLine($"{digit} {digit} {digit} {digit}");
+        Console.WriteLine("-----------------------------------");
+        /*13. Rectangle Pattern with Number
+
+Write a C# program that takes a number as input and displays a rectangle of 3 columns wide and 5 rows tall using that digit.
+Test Data:
+Enter a number: 5
+Expected Output:
+555
+5 5
+5 5
+5 5
+555*/
+        int f = 5;
+        Console.WriteLine("{0}{0}{0}", f);
+        Console.WriteLine("{0} {0}", f);
+        Console.WriteLine("{0} {0}", f);
+        Console.WriteLine("{0}{0}{0}", f);
+        Console.WriteLine("-----------------------------------");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /*
          Write a C# program to rotate an array (length 3) of integers in the left direction.
 Test Data:
@@ -132,6 +339,9 @@ Write a C# program to check if a given string is a palindrome or not.*/
         Console.WriteLine(IsPalindrome("aba"));
         Console.WriteLine(IsPalindrome("abcd"));
         Console.WriteLine("------------------------------------");
+        /*57. Max Product of Adjacent Integers
+
+Write a C# program to find the pair of adjacent elements that has the highest product of an array of integers.*/
 
 
 
