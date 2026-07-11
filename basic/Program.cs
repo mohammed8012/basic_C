@@ -225,6 +225,112 @@ Expected Output:
         Console.WriteLine("{0} {0}", f);
         Console.WriteLine("{0}{0}{0}", f);
         Console.WriteLine("-----------------------------------");
+        /*14. Celsius to Kelvin and Fahrenheit
+
+Write a C# program to convert Celsius degrees to Kelvin and Fahrenheit.
+Test Data:
+Enter the amount of celsius: 30
+Expected Output:
+Kelvin = 303
+Fahrenheit = 86*/
+        int celsius = 30;
+        double kelvin = celsius + 273.15;
+        double fahrenheit = (celsius * 9 / 5) + 32;
+        Console.WriteLine($"Kelvin = {kelvin}");
+        Console.WriteLine($"Fahrenheit = {fahrenheit}");
+        Console.WriteLine("-----------------------------------");
+        /*15. Remove Character by Index
+
+Write a C# program that removes a specified character from a non-empty string using the index of a character.
+Test Data:
+w3resource
+Sample Output:
+wresource
+w3resourc
+3resource*/
+        string name= "w3resource";
+        Console.WriteLine(name);
+
+        Console.WriteLine(name.Remove(1, 2));
+        Console.WriteLine(name.Remove(9, 1));
+        Console.WriteLine(name.Remove(0, 1));
+        Console.WriteLine("-----------------------------------");
+        /*16. Swap First and Last Characters
+
+Write a C# program to create a new string from a given string where the first and last characters change their positions.
+Test Data:
+w3resource
+Python
+Sample Output:
+e3resourcw
+nythoP
+x*/
+        string str1 = "w3resource";
+        string str2 = "Python";
+
+        char[] chars= str1.ToCharArray();
+        char tempChar = chars[0];
+        chars[0] = chars[chars.Length - 1];
+        chars[chars.Length - 1] = tempChar;
+
+        char[] chars2 = str2.ToCharArray();
+        char tempChar2 = chars2[0];
+        chars2[0] = chars2[chars2.Length - 1];
+        chars2[chars2.Length - 1] =tempChar2;
+        Console.WriteLine(new string(chars));
+        Console.WriteLine(new string(chars2));
+        Console.WriteLine("-----------------------------------");
+        /*17. Add First Character to Front and Back
+
+Write a C# program to create a string from a given string (length 1 or more) with the first character added at the front and back.
+Sample Output:
+Input a string : The quick brown fox jumps over the lazy dog.
+TThe quick brown fox jumps over the lazy dog.T*/
+        string inputString = "The quick brown fox jumps over the lazy dog.";
+        Console.WriteLine(inputString);
+        char firstChar = inputString[0];
+        string newString = firstChar + inputString + firstChar;
+        Console.WriteLine($"{firstChar}{inputString}{firstChar}");
+        Console.WriteLine("-----------------------------------");
+        /*18. Check Positive and Negative Pair
+
+Write a C# program to check a pair of integers and return true if one is negative and one is positive.
+Sample Output:
+Input first integer:
+-5
+Input second integer:
+25
+Check if one is negative and one is positive:
+True*/
+        int num5 = -5;
+        int num25 = 25;
+        bool resalt10 = (num5 < 0 && num25 > 0) || (num5 > 0 && num25 < 0);
+        Console.WriteLine($"Check if one is negative and one is positive: {resalt10}");
+        Console.WriteLine("-----------------------------------");
+        /*19. Sum or Triple Sum of Integers
+
+Write a C# program to compute the sum of two given integers. If two values are the same, return the triple of their sum.*/
+
+        Console.WriteLine("Enter two integers:");
+        int numA1 =Int32.Parse(Console.ReadLine());
+        Console.WriteLine("Enter second integer:");
+        int numB1 = Int32.Parse(Console.ReadLine());
+        int sumOrTriple = numA1 == numB1 ? (numA1 + numB1) * 3 : numA1 + numB1;
+        Console.WriteLine($"Sum or Triple Sum: {sumOrTriple}");
+        Console.WriteLine("-----------------------------------");
+        /*20. Absolute Difference or Double It
+
+Write a C# program to get the absolute value of the difference between two given numbers. Return double the absolute value of the difference if the first number is greater than the second number.*/
+
+
+
+
+
+
+
+
+
+
 
 
 
