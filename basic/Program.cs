@@ -322,7 +322,23 @@ Write a C# program to compute the sum of two given integers. If two values are t
 
 Write a C# program to get the absolute value of the difference between two given numbers. Return double the absolute value of the difference if the first number is greater than the second number.*/
 
+        int num10 = 19;
+        int num20 = 10;
+        Console.WriteLine($"Absolute Difference or Double It: {Math.Abs(num10 - num20)}");
+        Console.WriteLine("-----------------------------------");
+        /*21. Check for 20 or Sum Equals 20
 
+Write a C# program to check the sum of the two given integers. Return true if one of the integers is 20 or if their sum is 20.*/
+        Console.Write("Input first integer: ");
+        int num6 = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Input second integer: ");
+        int num8 = Convert.ToInt32(Console.ReadLine());
+
+        bool results = (num6 == 20) || (num8 == 20) || (num6 + num8 == 20);
+
+        Console.WriteLine(results);
+        Console.WriteLine("-----------------------------------");
 
 
 
